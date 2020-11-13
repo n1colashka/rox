@@ -425,14 +425,19 @@ cb();},500);}};Preloader.load_run();
 const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {
 }));
 
-const $players = document.querySelectorAll('.plyr');
+const $players = document.querySelectorAll('.video-wrapper');
 players.forEach((p, i) => {
-    $players[i].addEventListener('mouseover', ()=> {
+    $players[i].addEventListener('mouseover', (e)=> {
+        
         p.play();
     });
-    $players[i].addEventListener('mouseout', ()=> {
-        p.stop();
+    $players[i].addEventListener('mouseout', (e)=> {
+        if (!(e.relatedTarget.closest('.video-wrapper') && e.target.closest('.plyr'))) {
+            p.stop();
+        }
+        
     });
+    
 });
 </script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
