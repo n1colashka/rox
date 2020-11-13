@@ -302,6 +302,11 @@
 }
 
 @media (max-width: 768px) {
+    #intro.trends-page {
+        min-height: auto;
+        padding-top: 140px;
+    }
+
     .videos .container {
         // max-width: 100%;
     }

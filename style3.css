@@ -281,6 +281,10 @@
 }
 
 @media (max-width: 768px) {
+  #intro.trends-page {
+    min-height: auto;
+    padding-top: 140px;
+  }
   #intro-spinner .wrapper {
     height: 178px;
     width: 178px;
