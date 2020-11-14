@@ -108,7 +108,7 @@
                         data-aos-offset="150"
                         data-aos-delay="50"
                         data-aos-duration="1000"
-                        data-aos-once="true"
+                        data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-1">
                     
@@ -129,7 +129,7 @@
                         data-aos-offset="150"
                         data-aos-delay="150"
                         data-aos-duration="1000"
-                        data-aos-once="true"
+                        data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-2">
                         
@@ -150,7 +150,7 @@
                         data-aos-offset="150"
                         data-aos-delay="50"
                         data-aos-duration="1000"
-                        data-aos-once="true"
+                        data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-3">
                         <div class="video-wrapper">
@@ -170,7 +170,7 @@
                         data-aos-offset="150"
                         data-aos-delay="150"
                         data-aos-duration="1000"
-                        data-aos-once="true"
+                        data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-4">
                         <a class="video-wrapper" href="trend.html">
@@ -190,7 +190,7 @@
                         data-aos-offset="150"
                         data-aos-delay="50"
                         data-aos-duration="1000"
-                        data-aos-once="true"
+                        data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-5">
                         <a class="video-wrapper" href="trend.html">
@@ -209,7 +209,7 @@
                     <div class="video-item" data-aos="fade-left" data-aos-offset="150"
                         data-aos-delay="150"
                         data-aos-duration="1000"
-                        data-aos-once="true"
+                        data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-6">
                         <a class="video-wrapper" href="trend.html">
@@ -457,7 +457,7 @@ cb();},500);}};Preloader.load_run();
 } );
 
 
-const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {
+const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true,
 }));
 
 const $players = document.querySelectorAll('.video-wrapper');
@@ -467,6 +467,7 @@ document.body.click();
 players.forEach((p, i) => {
     
         p.on('ready', function() {
+            p.muted = true;
             if (window.innerWidth <= 992) {
             document.addEventListener(`aos:in:video-${i}`, () => {
                 p.play();
