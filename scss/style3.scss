@@ -41,7 +41,7 @@
 }
 
 #say-hello-starter.trends-page .trends-foot {
-    max-width: 925px;
+    max-width: 1000px;
     font-size: 35px;
     line-height: 48px;
     font-weight: 300;
@@ -51,6 +51,7 @@
 }
 
 #say-hello-starter .trends-foot a{
+    display: inline-block;
     position: relative;
     font-size: 35px;
     line-height: 48px;
@@ -67,6 +68,10 @@
     opacity: .26;
 }
 
+#say-hello-starter .yellow-block-text {
+    padding: 0;
+}
+
 #say-hello-starter.trends-page .spinner {
     bottom: -260px;
 }
@@ -77,13 +82,13 @@
 }
 
 #say-hello-starter .trends-foot a::after {
-    position: absolute;
-    content: "";
-    bottom: -14px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #020815;
+    // position: absolute;
+    // content: "";
+    bottom: -8px;
+    // left: 0;
+    // width: 100%;
+    // height: 2px;
+    // background-color: #020815;
 }
 
 #say-hello-starter.trends-page .container {
@@ -187,18 +192,139 @@
 
 }
 
-.plyr .plyr__controls__item  { display: none }
-.plyr--playing .plyr__controls__item.plyr__progress__container{ display: block }
+.sections-wrapper {
+    overflow: hidden;
+}
+
+#say-hello-starter.trends-page {
+    overflow: visible;
+}
+
+.plyr .plyr__controls { display: none }
 .plyr .plyr__control.plyr__control--overlaid,
 .plyr .plyr--paused .plyr__control.plyr__control--overlaid{
     display: none;
-} 
+}
 
-@media (min-width: 992px) {
-    .videos .container {
-        // max-width: 1440px;
+.trend {
+    padding-bottom: 60px;
+}
+
+.video-wrapper {
+    display: block;
+}
+
+.trend-wrapper {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.trend-content {
+    padding-top: 30px;
+}
+
+@keyframes big {
+    
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
+.trend-big-video {
+    margin-top: 30px;
+    animation: big 2s ease-out forwards;
+-webkit-animation:2s big ease-in-out;
+-moz-animation:2s big ease-in-out;
+}
+
+
+.trend-page#intro {
+    min-height: auto;
+}
+
+.trend-inner {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    max-width: 670px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
+}
+.trend-item {
+    margin-bottom: 40px;
+}
+.trend-text {
+    margin-bottom: 45px;
+    p{
+        color: #DDE6F3;
+        font-size: 18px;
+        letter-spacing: -0.1px;
+        line-height: 32px;
+    }
+}
+.trend-title {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.17px;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+.trend-video-caption {
+    color: #D3E0F3;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.09px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.trend-arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.1px;
+    line-height: 24px;
+    color: #DDE6F3;
+
+    .arrow-x {
+        height: 37px;
+        width: 80px;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}
+
+.trend-arrow-prev {
+    .arrow-x {
+        &::before,
+        &::after {
+            left: 0;
+            right: auto;
+            transform: rotate(41deg);
+        }
+
+        &::before {
+            transform: rotate(-41deg);
+        }
+    }
+}
+.trend-arrow-prev,
+.trend-arrow-next {
+    color: #DDE6F3;
+    display: flex;
+    align-items: center;
+}
+
 
 @media (max-width: 1280px) {
     #say-hello-starter.trends-page .container {
@@ -251,13 +377,9 @@
 
     #say-hello-starter.trends-page .spinner {
         right: -110px;
-        bottom: 190px;
+        bottom: 195px;
     }
-    
-    #say-hello-starter {
-        // overflow: visible;
-    }
-    
+
     #say-hello-starter.trends-page .trends-foot {
         font-size: 26px;
         line-height: 36px;
@@ -302,19 +424,63 @@
 }
 
 @media (max-width: 768px) {
+    .trend-inner {
+        padding-bottom: 45px;
+    }
+    .trend-arrows {
+        
+        .arrow-x {
+            height: 22px;
+            width: 35px;
+        }
+    }
+    
+    .trend #intro-text {
+        max-width: 100%;
+    }
+    .trend-title {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.13px;
+        line-height: 42px;
+        margin-bottom: 5px;
+    }
+
+    .trend-video-caption {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.08px;
+        line-height: 20px;
+    }
+
+    .trend-text {
+        font-size: 16px;
+        letter-spacing: -0.09px;
+        line-height: 28px;
+    }
+
+    .trend-item {
+        margin-bottom: 45px;
+    }
+    
+    .videos {
+        padding-top: 0;
+    }
+    .trends-page #intro-text {
+        margin-bottom: 50px;
+    }
     #intro.trends-page {
         min-height: auto;
         padding-top: 140px;
     }
 
-    .videos .container {
-        // max-width: 100%;
-    }
-
-    #intro-spinner .wrapper {
-        height: 178px;
-        width: 178px;
-        opacity: 0.3;
+    #intro-spinner {
+        bottom: 0;
+        .wrapper {
+            height: 178px;
+            width: 178px;
+            
+        }
     }
     #say-hello-starter.trends-page .trends-foot {
         font-size: 16px;

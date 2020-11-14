@@ -1079,9 +1079,11 @@ template {
 
 #say-hello-starter .spinner {
     position: absolute;
+    z-index: 60;
     bottom: -140px;
     right: -140px
 }
+
 
 @media (min-width:1440px) {
     #say-hello-starter .spinner {
