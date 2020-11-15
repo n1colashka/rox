@@ -86,11 +86,7 @@ players.forEach((p, i) => {
     
         p.on('ready', function() {
             p.muted = true;
-            if (window.innerWidth <= 992) {
-            // document.addEventListener(`aos:in:video-${i}`, () => {
-            //     p.play();
-            // });
-        }
+            
 
         $players[i].addEventListener('mouseover', (e)=> {
             
@@ -107,32 +103,48 @@ players.forEach((p, i) => {
 
 var lineText = document.querySelector("#lineText");
 var videoItems = document.querySelectorAll(".video-item");
+var videoTrendItems = document.querySelectorAll(".video-el");
+
 
 function scrolling(e) {
-
-    if (isFullyVisible(lineText)) {
-        lineText.classList.add("active");
-    } else if (!(isFullyVisible(lineText)) && (!(isPartiallyVisible(lineText)))) {
-    lineText.classList.remove("active");
+    if (lineText) {
+        if (isFullyVisible(lineText)) {
+            lineText.classList.add("active");
+        } else if (!(isFullyVisible(lineText)) && (!(isPartiallyVisible(lineText)))) {
+        lineText.classList.remove("active");
+        }
     }
 
     
 
     if (window.innerWidth <= 992) {
         
+        if (videoItems) {
             for (var i = 0; i < videoItems.length; i++) {
                 var videoItem = videoItems[i];
-        
+                players[i].muted = true;
                 if (isFullyVisible(videoItem)) {
+                    players[i].play();
+                } else {
+                    players[i].stop();
+
+                }
+            }
+        }
+
+        if (videoTrendItems) {
+            for (var i = 0; i < videoTrendItems.length; i++) {
+                var videoTrendItem = videoTrendItems[i];
+                players[i].muted = true;
+                if (isFullyVisible(videoTrendItem)) {
                     players[i].play();
                 } else {
                     players[i].stop();
                 }
             }
-        
+        }
         
     }
-
 
 }
 
