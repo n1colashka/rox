@@ -47,7 +47,6 @@
 <div id="preloader"></div>
 
 <script>
-    document.body.click();
     let vhLog = 0, vhNew, updateVH = () => {
         vhNew = window.innerHeight;
         if ( Math.abs(vhLog - vhNew) > 130 ) {
@@ -153,7 +152,7 @@
                         data-aos-mirror="true"
                         data-aos-easing="ease-in-out"
                         data-aos-id="video-2">
-                        <div class="video-wrapper">
+                        <a class="video-wrapper" href="trend.html"">
                             <div class="plyr__video-embed plyr-player">
                                 <iframe
                                     src="https://player.vimeo.com/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
@@ -162,7 +161,7 @@
                                     allow="autoplay"
                                 ></iframe>
                             </div>
-                        </div>
+                        </a>
                         <div class="video-title">Stock Images</div>
                         <div class="video-subtitle">Stop Use it</div>
                     </div>
@@ -232,7 +231,7 @@
         <section id="say-hello-starter" class="light-area hover-element trends-page" data-hover-text=">">
                     <div class="trends-foot scroll-track yellow-block-text light-area"  data-revert="true" data-offset="0.3" data-duration="0.5" >
                         <div class="container">
-                            <p>
+                            <p id="lineText">
                                 Nice to meet you 👋 <br>
                             We are ROX, a boutique design agency that provides high end services from concept to market. Want to get some more inspiration? Take a look at our <a class="custom-em dark" href="https://www.werox.co.il/new2020/">new stunning website</a>
                             </p>
@@ -456,37 +455,8 @@ cb();},500);}};Preloader.load_run();
 	document.body.appendChild( el );
 } );
 
-
-const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true,
-}));
-
-const $players = document.querySelectorAll('.video-wrapper');
-document.body.focus();
-document.body.click();
-
-players.forEach((p, i) => {
-    
-        p.on('ready', function() {
-            p.muted = true;
-            if (window.innerWidth <= 992) {
-            document.addEventListener(`aos:in:video-${i}`, () => {
-                p.play();
-            });
-        }
-
-        $players[i].addEventListener('mouseover', (e)=> {
-            
-            p.play();
-        });
-        $players[i].addEventListener('mouseout', (e)=> {
-            if (!(e.relatedTarget.closest('.video-wrapper') && e.target.closest('.plyr'))) {
-                p.stop();
-            }
-        });
-    });
-
-});
 </script>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
