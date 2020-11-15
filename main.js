@@ -163,6 +163,14 @@ function scrolling(e) {
             for (var i = 0; i < videoItems.length; i++) {
                 var videoItem = videoItems[i];
                 players[i].muted = true;
+                
+                if (i === 0) {
+
+                    if (isPartiallyVisible(videoTrendItem)) {
+                        players[i].play();
+                    }
+                }
+                
                 if (isFullyVisible(videoItem)) {
                     players[i].play();
                 } else {
