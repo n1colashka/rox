@@ -256,17 +256,18 @@
 @keyframes big {
   0% {
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
 .trend-big-video {
   margin-top: 30px;
-  transition: .3s ease;
+  opacity: 0;
+  animation: big 0.8s ease-out 0.3s 1 forwards;
 }
 
 .trend-page#intro {

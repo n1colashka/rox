@@ -258,20 +258,23 @@
     
     0% {
         opacity: 0;
-        transform: translateY(200px);
+        transform: translateY(100px)
     }
+
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: none
     }
 }
 
 .trend-big-video {
     margin-top: 30px;
+    opacity: 0;
+
+    animation: big 0.8s ease-out 0.3s 1 forwards;
 //     animation: big 2s ease-out forwards;
 // -webkit-animation:2s big ease-in-out;
 // -moz-animation:2s big ease-in-out;
-    transition: .3s ease;
 }
 
 .trend-page#intro {
