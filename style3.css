@@ -267,7 +267,10 @@
 .trend-big-video {
   margin-top: 30px;
   opacity: 0;
-  animation: big 0.8s ease-out 0.3s 1 forwards;
+}
+
+.trend-big-video.animated {
+  animation: big 0.67s ease-out 0.3s 1 forwards;
 }
 
 .trend-page#intro {

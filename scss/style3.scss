@@ -271,10 +271,13 @@
     margin-top: 30px;
     opacity: 0;
 
-    animation: big 0.8s ease-out 0.3s 1 forwards;
 //     animation: big 2s ease-out forwards;
 // -webkit-animation:2s big ease-in-out;
 // -moz-animation:2s big ease-in-out;
+
+    &.animated {
+        animation: big 0.67s ease-out 0.3s 1 forwards;
+    }
 }
 
 .trend-page#intro {

@@ -47,7 +47,6 @@
 <div id="preloader"></div>
 
 <script>
-    document.body.click();
     let vhLog = 0, vhNew, updateVH = () => {
         vhNew = window.innerHeight;
         if ( Math.abs(vhLog - vhNew) > 130 ) {
@@ -56,6 +55,12 @@
         }
     };
     updateVH();
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const $trendBigVideo = document.querySelector('.trend-big-video');
+        $trendBigVideo.classList.add('animated');
+    });
+
 </script>
 
 
@@ -91,7 +96,7 @@
         <section class="trend-content">
             <div class="trend-wrapper">
                 <!-- data-aos="fade-up" -->
-                <div class="trend-big-video video-el" style="animation-delay: 1s;"
+                <div class="trend-big-video video-el" style="animation-delay: 2.5s;"
                         
                         data-aos-id="video-0">
                 
