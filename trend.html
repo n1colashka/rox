@@ -56,11 +56,6 @@
     };
     updateVH();
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const $trendBigVideo = document.querySelector('.trend-big-video');
-        $trendBigVideo.classList.add('animated');
-    });
-
 </script>
 
 
@@ -96,7 +91,7 @@
         <section class="trend-content">
             <div class="trend-wrapper">
                 <!-- data-aos="fade-up" -->
-                <div class="trend-big-video video-el" style="animation-delay: 2.5s;"
+                <div class="trend-big-video video-el"
                         
                         data-aos-id="video-0">
                 
@@ -474,6 +469,17 @@ cb();},500);}};Preloader.load_run();
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+    const preloaderTimer = setInterval(function() {
+            
+            if (document.querySelector('#preloader-first-load')) {
+
+            } else {
+                const $trendBigVideo = document.querySelector('.trend-big-video');
+                $trendBigVideo.classList.add('animated');
+                clearInterval(preloaderTimer);
+            }
+    }, 1000); 
+        
 </script>
 </body>
 </html>
