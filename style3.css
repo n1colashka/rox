@@ -269,6 +269,7 @@
   animation: big 2s ease-out forwards;
   -webkit-animation: 2s big ease-in-out;
   -moz-animation: 2s big ease-in-out;
+  transition: .3s ease;
 }
 
 .trend-page#intro {
