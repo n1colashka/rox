@@ -62,6 +62,11 @@
     pointer-events: all;
 }
 
+.trends-page #intro-spinner {
+    right: -268px;
+    bottom: 0;
+}
+
 #say-hello-starter.trends-page .spinner .wrapper {
     width: 479px;
     height: 535px;
@@ -448,7 +453,27 @@
     }
 }
 
+@media (max-width: 1260px) {
+    .trends-page #intro-spinner {
+        right: -184px;
+        bottom: 0;
+    }
+
+    .trends-page#intro .container {
+        max-width: 900px;
+    }
+}
+
 @media (max-width: 768px) {
+    .trends-page #intro-text {
+        max-width: 100%;
+    }
+    
+    .trends-page #intro-spinner {
+        right: -100px;
+        bottom: -2px;
+    }
+    
     .trend-inner {
         padding-bottom: 45px;
     }

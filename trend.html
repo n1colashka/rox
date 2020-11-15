@@ -91,7 +91,7 @@
         <section class="trend-content">
             <div class="trend-wrapper">
                 <div class="trend-big-video video-el"  style='animation-delay: 2s;'
-                        data-aos="fade-down"
+                        data-aos="fade-up"
                         data-aos-offset="0"
                         data-aos-delay="500"
                         data-aos-duration="1000"
@@ -113,7 +113,7 @@
             </div>
                 <div class="trend-inner">
                     <div class="trend-item">
-                        <div class="trend-text" data-aos="fade-right"
+                        <div class="trend-text" data-aos="fade-up"
                             data-aos-offset="150"
                             data-aos-delay="150"
                             data-aos-duration="1000"
@@ -126,7 +126,7 @@
                             </p>
                         </div>
                         <div class="trend-video-wrapper video-el">
-                            <div class="trend-video" data-aos="fade-left"
+                            <div class="trend-video" data-aos="fade-up"
                             data-aos-offset="150"
                             data-aos-delay="250"
                             data-aos-duration="1000"
@@ -146,7 +146,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="trend-video-caption" data-aos="fade-down"
+                            <div class="trend-video-caption" data-aos="fade-up"
                             data-aos-offset="50"
                             data-aos-delay="350"
                             data-aos-mirror="true"
@@ -157,7 +157,7 @@
                     </div>
                     <div class="trend-item">
                         <div class="trend-text"
-                        data-aos="fade-right"
+                        data-aos="fade-up"
                             data-aos-offset="150"
                             data-aos-delay="150"
                             data-aos-mirror="true"
@@ -169,7 +169,7 @@
                             </p>
                         </div>
                         <div class="trend-video-wrapper video-el">
-                            <div class="trend-video" data-aos="fade-left"
+                            <div class="trend-video" data-aos="fade-up"
                             data-aos-offset="150"
                             data-aos-delay="250"
                             data-aos-duration="1000"
@@ -188,7 +188,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="trend-video-caption" data-aos="fade-down"
+                            <div class="trend-video-caption" data-aos="fade-up"
                             data-aos-offset="50"
                             data-aos-delay="350"
                             data-aos-mirror="true"
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                     <div class="trend-item">
-                        <div class="trend-text" data-aos="fade-right"
+                        <div class="trend-text" data-aos="fade-up"
                         data-aos-offset="50"
                         data-aos-delay="150"
                             data-aos-mirror="true"
@@ -214,7 +214,7 @@
                             </p>
                         </div>
                         <div class="trend-video-wrapper video-el">
-                            <div class="trend-video" data-aos="fade-left"
+                            <div class="trend-video" data-aos="fade-up"
                             data-aos-offset="100"
                             data-aos-delay="250"
                             data-aos-duration="1000"
@@ -233,7 +233,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="trend-video-caption" data-aos="fade-down"
+                            <div class="trend-video-caption" data-aos="fade-up"
                             data-aos-offset="10"
                             data-aos-delay="350"
                             data-aos-duration="1000"
@@ -439,7 +439,7 @@
 let Preloader={el:document.getElementById("preloader"),toh:null,toh2:null,load_run(){this.prepare();this.show();window.addEventListener("load",()=>{requestAnimationFrame(()=>{requestAnimationFrame(()=>{this.done(()=>{document.getElementById('preloader-first-load').remove();});});});});},prepare(){this.el.style.display="none";this.el.style.width="0%";},show(){this.el.style.display="block";},run(){this.el.style.width="70%";},done(cb){this.el.style.width="100%";this.el.style.transitionDuration="0.5s";clearTimeout(this.toh);this.toh=setTimeout(()=>{this.el.classList.add("remove");this.toh2=setTimeout(()=>{this.el.removeAttribute("style");this.el.classList.remove("remove");},500);if(typeof cb==="function")
 cb();},500);}};Preloader.load_run();
 </script>
-<script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
+<!-- <script src="https://cdn.plyr.io/3.6.2/plyr.js"></script> -->
 <!-- <script defer type='text/javascript' src='https://www.werox.co.il/new2020/wp-content/themes/tyco/cache/assets/template-front-page.js?ver=1604911936' id='template-front-page-js'></script> -->
 <script defer type='text/javascript' src='https://www.werox.co.il/new2020/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
 <script>document.querySelectorAll( 'link[rel="preload"]' ).forEach( ( e ) => {

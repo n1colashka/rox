@@ -42,6 +42,7 @@
 <meta name="msapplication-TileImage" content="https://www.werox.co.il/new2020/wp-content/uploads/2020/09/Favicon.png" />
 </head>
 
+
 <body class="home page-template-default page page-id-52">
 <div id="preloader-first-load"></div>
 <div id="preloader"></div>
@@ -103,7 +104,7 @@
             <div class="container">
                 <div class="videos-list">
                     <div class="video-item"
-                        data-aos="fade-right"
+                        data-aos="fade-up"
                         data-aos-offset="250"
                         data-aos-delay="50"
                         data-aos-duration="1000"
@@ -124,7 +125,7 @@
                         <div class="video-title">3D Elements</div>
                         <div class="video-subtitle">The Comeback of 3D Elements</div>
                     </div>
-                    <div class="video-item" data-aos="fade-left"data-aos="fade-left"
+                    <div class="video-item" data-aos="fade-up"
                         data-aos-offset="250"
                         data-aos-delay="150"
                         data-aos-duration="1000"
@@ -145,7 +146,7 @@
                         <div class="video-title">Delightful Moments</div>
                         <div class="video-subtitle">Delight your Product</div>
                     </div>
-                    <div class="video-item" data-aos="fade-right"
+                    <div class="video-item" data-aos="fade-up"
                         data-aos-offset="250"
                         data-aos-delay="50"
                         data-aos-duration="1000"
@@ -165,7 +166,7 @@
                         <div class="video-title">Stock Images</div>
                         <div class="video-subtitle">Stop Use it</div>
                     </div>
-                    <div class="video-item" data-aos="fade-left"
+                    <div class="video-item" data-aos="fade-up"
                         data-aos-offset="250"
                         data-aos-delay="150"
                         data-aos-duration="1000"
@@ -185,7 +186,7 @@
                         <div class="video-title">Unusual Scrolling</div>
                         <div class="video-subtitle">To Increase Engagement</div>
                     </div>
-                    <div class="video-item" data-aos="fade-right"
+                    <div class="video-item" data-aos="fade-up"
                         data-aos-offset="250"
                         data-aos-delay="50"
                         data-aos-duration="1000"
@@ -205,7 +206,7 @@
                         <div class="video-title">Minimalistic Design</div>
                         <div class="video-subtitle">It is Time to Do Less</div>
                     </div>
-                    <div class="video-item" data-aos="fade-left" data-aos-offset="150"
+                    <div class="video-item" data-aos="fade-up" data-aos-offset="150"
                         data-aos-delay="250"
                         data-aos-duration="1000"
                         data-aos-mirror="true"
@@ -426,7 +427,6 @@
 let Preloader={el:document.getElementById("preloader"),toh:null,toh2:null,load_run(){this.prepare();this.show();window.addEventListener("load",()=>{requestAnimationFrame(()=>{requestAnimationFrame(()=>{this.done(()=>{document.getElementById('preloader-first-load').remove();});});});});},prepare(){this.el.style.display="none";this.el.style.width="0%";},show(){this.el.style.display="block";},run(){this.el.style.width="70%";},done(cb){this.el.style.width="100%";this.el.style.transitionDuration="0.5s";clearTimeout(this.toh);this.toh=setTimeout(()=>{this.el.classList.add("remove");this.toh2=setTimeout(()=>{this.el.removeAttribute("style");this.el.classList.remove("remove");},500);if(typeof cb==="function")
 cb();},500);}};Preloader.load_run();
 </script>
-<script src="https://cdn.plyr.io/3.6.2/plyr.js"></script>
 <!-- <script defer type='text/javascript' src='https://www.werox.co.il/new2020/wp-content/themes/tyco/cache/assets/template-front-page.js?ver=1604911936' id='template-front-page-js'></script> -->
 <script defer type='text/javascript' src='https://www.werox.co.il/new2020/wp-includes/js/wp-embed.min.js?ver=5.5.3' id='wp-embed-js'></script>
 <script>document.querySelectorAll( 'link[rel="preload"]' ).forEach( ( e ) => {
