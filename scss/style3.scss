@@ -22,6 +22,10 @@
     }
 }
 
+.trend #intro {
+    padding-top: 120px;
+}
+
 #header {
     top: 0;
     display: flex;
@@ -238,6 +242,11 @@
     overflow: hidden;
 }
 
+#say-hello-starter.trend-page-hello .btn {
+    justify-content: center;
+    font-size: 55px;
+}
+
 #say-hello-starter.trends-page {
     overflow: visible;
 }
@@ -249,17 +258,14 @@
 }
 
 #say-hello-starter.trend-page-hello .container {
-    padding: 60px 20px;
+    padding: 45px 20px;
     text-align: center;
+    max-width: 100%;
 }
 
 
 .trend {
     padding-bottom: 60px;
-}
-
-.trend {
-
 }
 
 .iframe-hover-circle {
@@ -513,6 +519,11 @@
 }
 
 @media (max-width: 768px) {
+    #say-hello-starter.trend-page-hello .btn {
+        font-size: 24px;
+        line-height: normal;
+    }
+    
     #header {
         height: 97px;
     }
@@ -575,8 +586,10 @@
     
     
     #say-hello-starter.trend-page-hello .container {
-        padding: 32px 20px;
+        padding: 26px 20px;
     }
+
+    
     
     .trend-inner {
         padding-bottom: 45px;
