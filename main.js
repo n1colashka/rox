@@ -84,7 +84,7 @@ function throttleScroll(e) {
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
-const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true,
+const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true, clickToplay: false,
 }));
 
 const $players = document.querySelectorAll('.video-wrapper');
@@ -97,8 +97,11 @@ players.forEach((p, i) => {
         p.on('ready', function() {
             p.muted = true;
             p.loop = true;
+            p.clickToPlay = false;
+            
 
             if (videoTrendItems.length > 0) {
+                p.clickToPlay = false;
                 if (i === 0) {
     
                     if (isPartiallyVisible($players[i])) {
@@ -171,6 +174,7 @@ function scrolling(e) {
 
                     if (isPartiallyVisible(videoItem)) {
                         players[i].play();
+                        videoItem.dataset.aosOffset="0";
                     }
                 }
                 
@@ -188,6 +192,7 @@ function scrolling(e) {
                 var videoTrendItem = videoTrendItems[i];
                 players[i].muted = true;
                 players[i].loop = true;
+                players[i].clickToPlay = false;
 
                 if (i === 0) {
 
