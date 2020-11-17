@@ -254,6 +254,16 @@
   padding-bottom: 60px;
 }
 
+.iframe-hover-circle {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.iframe-hover-main {
+  width: 50px !important;
+  height: 50px !important;
+}
+
 .video-wrapper {
   display: block;
 }

@@ -84,7 +84,7 @@ function throttleScroll(e) {
 
 document.addEventListener("DOMContentLoaded", scrolling, false);
 
-const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true, clickToplay: false,
+const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true, clickToPlay: false, controls: '',
 }));
 
 const $players = document.querySelectorAll('.video-wrapper');
@@ -93,7 +93,6 @@ var videoItems = document.querySelectorAll(".video-item");
 var videoTrendItems = document.querySelectorAll(".video-el");
 
 players.forEach((p, i) => {
-    
         p.on('ready', function() {
             p.muted = true;
             p.loop = true;
@@ -102,6 +101,17 @@ players.forEach((p, i) => {
 
             if (videoTrendItems.length > 0) {
                 p.clickToPlay = false;
+
+                $players[i].addEventListener('mouseover', function() {
+                    document.querySelector('body.custom-mouse #mouse .cr2').classList.add('iframe-hover-circle');
+                    document.querySelector('body.custom-mouse #mouse').classList.add('iframe-hover-main');
+                });
+                
+                $players[i].addEventListener('mouseout', function() {
+                    document.querySelector('body.custom-mouse #mouse .cr2').classList.remove('iframe-hover-circle');
+                    document.querySelector('body.custom-mouse #mouse').classList.remove('iframe-hover-main');
+                });
+                
                 if (i === 0) {
     
                     if (isPartiallyVisible($players[i])) {
@@ -115,6 +125,7 @@ players.forEach((p, i) => {
                 
             }  
             if (videoItems.length > 0) {
+                
                 $players[i].addEventListener('mouseover', (e)=> {
                     p.play();
                 });
