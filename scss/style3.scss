@@ -61,7 +61,7 @@
 
 .trends-page #intro-spinner {
     right: -160px;
-    bottom: 0;
+    bottom: -45px;
 }
 
 #say-hello-starter.trends-page .spinner .wrapper {
@@ -118,6 +118,7 @@
 
 #intro.trends-page {
     padding-top: 215px;
+    min-height: auto;
     overflow: visible;
 }
 
@@ -137,7 +138,7 @@
 }
 
 .videos {
-    padding-top: 100px;
+    padding-top: 170px;
     padding-bottom: 270px;
     overflow: hidden;
 }
@@ -386,6 +387,11 @@
     align-items: center;
 }
 
+@media (max-width: 1259px) {
+    .header-caption {
+        right: 30px;
+    }
+}
 
 @media (max-width: 1280px) {
     #say-hello-starter.trends-page .container {
