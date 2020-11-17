@@ -96,6 +96,7 @@ players.forEach((p, i) => {
     
         p.on('ready', function() {
             p.muted = true;
+            p.loop = true;
 
             if (videoTrendItems.length > 0) {
                 if (i === 0) {
@@ -132,6 +133,7 @@ function scrolling(e) {
         for (var i = 0; i < videoTrendItems.length; i++) {
             var videoTrendItem = videoTrendItems[i];
             players[i].muted = true;
+            players[i].loop = true;
 
             if (i === 0) {
 
@@ -163,6 +165,7 @@ function scrolling(e) {
             for (var i = 0; i < videoItems.length; i++) {
                 var videoItem = videoItems[i];
                 players[i].muted = true;
+                players[i].loop = true;
 
                 if (i === 0) {
 
@@ -184,6 +187,7 @@ function scrolling(e) {
             for (var i = 0; i < videoTrendItems.length; i++) {
                 var videoTrendItem = videoTrendItems[i];
                 players[i].muted = true;
+                players[i].loop = true;
 
                 if (i === 0) {
 

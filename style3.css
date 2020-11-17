@@ -13,8 +13,9 @@
   text-decoration: none;
 }
 
-.logo-link {
+.logo-link img {
   width: 89px;
+  height: 48px;
 }
 
 #header {
@@ -23,21 +24,6 @@
 
 .svg-items {
   display: none;
-}
-
-.logo-subtitle {
-  color: #FFF034;
-  font-family: Rockwell;
-  font-size: 13px;
-  font-style: italic;
-  letter-spacing: 1.1px;
-  line-height: 16px;
-  display: inline-block;
-  margin-left: -10px;
-}
-
-.logo-subtitle:hover {
-  text-decoration: none;
 }
 
 #say-hello-starter.trends-page .trends-foot {
@@ -50,7 +36,16 @@
   padding-bottom: 12px;
 }
 
-#say-hello-starter .trends-foot a {
+.trends-foot-wrapper {
+  display: block;
+  text-decoration: none;
+}
+
+.trends-foot-wrapper:hover {
+  text-decoration: none;
+}
+
+#say-hello-starter .trends-foot .link-text {
   display: inline-block;
   position: relative;
   font-size: 35px;
@@ -63,7 +58,7 @@
 }
 
 .trends-page #intro-spinner {
-  right: -268px;
+  right: -160px;
   bottom: 0;
 }
 
@@ -92,11 +87,11 @@
   transform: translate3d(0, 30px, 0);
 }
 
-#lineText a {
+#lineText .link-text {
   transition: all 1s ease-in-out;
 }
 
-#lineText a::after {
+#lineText .link-text::after {
   transition: all 1s ease-in-out;
   width: 0;
 }
@@ -106,11 +101,11 @@
   transform: translate3d(0, 0, 0);
 }
 
-#lineText.active a::after {
+#lineText.active .link-text::after {
   width: 100%;
 }
 
-#say-hello-starter .trends-foot a::after {
+#say-hello-starter .trends-foot .link-text::after {
   bottom: -8px;
 }
 
@@ -121,6 +116,22 @@
 
 #intro.trends-page {
   padding-top: 215px;
+  overflow: visible;
+}
+
+#intro-spinner .wrapper {
+  height: 389px;
+  width: 391px;
+}
+
+#say-hello-starter .wrapper {
+  height: 427px;
+  width: 431px;
+}
+
+#say-hello-starter .spinner {
+  bottom: -274px;
+  right: -144px;
 }
 
 .videos {
@@ -234,6 +245,11 @@
   display: none;
 }
 
+#say-hello-starter.trend-page-hello .container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
 .trend {
   padding-bottom: 60px;
 }
@@ -249,7 +265,7 @@
 }
 
 .trend-content {
-  padding-top: 30px;
+  padding-top: 15px;
   overflow: hidden;
 }
 
@@ -275,6 +291,7 @@
 
 .trend-page#intro {
   min-height: auto;
+  overflow: visible;
 }
 
 .trend-inner {
@@ -399,7 +416,7 @@
     line-height: 36px;
     padding-right: 0;
   }
-  #say-hello-starter.trends-page .trends-foot a {
+  #say-hello-starter.trends-page .trends-foot .link-text {
     font-size: 26px;
     line-height: 36px;
   }
@@ -443,12 +460,48 @@
 }
 
 @media (max-width: 768px) {
+  .trend-page #intro-text {
+    font-size: inherit;
+    line-height: normal;
+  }
+  .trend-page #intro-text > span {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .trend-page #intro-text small {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .trend-content {
+    padding-top: 0;
+  }
+  .logo-link img {
+    width: 89px;
+    height: 44px;
+  }
+  #say-hello-starter .wrapper {
+    height: 163px;
+    width: 165px;
+  }
   .trends-page #intro-text {
     max-width: 100%;
   }
   .trends-page #intro-spinner {
-    right: -100px;
-    bottom: -2px;
+    right: -107px;
+    bottom: -125px;
+  }
+  #say-hello-starter.trends-page .spinner {
+    display: none;
+  }
+  #say-hello-starter.trends-page .container {
+    padding: 40px 25px;
+  }
+  #say-hello-starter.trend-page-hello .spinner {
+    bottom: -77px;
+    right: -72px;
+  }
+  #say-hello-starter.trend-page-hello .container {
+    padding: 32px 20px;
   }
   .trend-inner {
     padding-bottom: 45px;
@@ -504,7 +557,7 @@
     letter-spacing: -0.03px;
     line-height: 26px;
   }
-  #say-hello-starter.trends-page .trends-foot a {
+  #say-hello-starter.trends-page .trends-foot .link-text {
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -0.03px;
