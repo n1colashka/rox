@@ -125,6 +125,10 @@ players.forEach((p, i) => {
                 
             }  
             if (videoItems.length > 0) {
+
+                if (window.innerWidth <= 992) {
+                    players[i].play();
+                } 
                 
                 $players[i].addEventListener('mouseover', (e)=> {
                     p.play();
@@ -176,20 +180,22 @@ function scrolling(e) {
         
         if (videoItems.length > 0) {
             
+            players[0].play();
+            $players[0].dataset.aosOffset="0";
+            
+            
             for (var i = 0; i < videoItems.length; i++) {
                 var videoItem = videoItems[i];
                 players[i].muted = true;
                 players[i].loop = true;
 
                 if (i === 0) {
-
-                    if (isPartiallyVisible(videoItem)) {
-                        players[i].play();
-                        videoItem.dataset.aosOffset="0";
-                    }
+                    
+                    players[i].play();
+                    videoItem.dataset.aosOffset="0";
                 }
                 
-                if (isFullyVisible(videoItem)) {
+                else if (isFullyVisible(videoItem)) {
                     players[i].play();
                 } else {
                     players[i].pause();
