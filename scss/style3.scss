@@ -1,7 +1,9 @@
 .header-caption {
     position: absolute;
     right: 60px;
-    top: 30px;
+    // top: 30px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
     color: #FFEE33;
     font-size: 18px;
@@ -22,6 +24,9 @@
 
 #header {
     top: 0;
+    display: flex;
+    align-items: center;
+    height: 127px;
 }
 
 .svg-items {
@@ -490,6 +495,12 @@
     }
 }
 
+@media (max-width: 1440px) {
+    #header {
+        background-color: #020B15;
+    }
+}
+
 @media (max-width: 1260px) {
     .trends-page #intro-spinner {
         right: -184px;
@@ -502,6 +513,10 @@
 }
 
 @media (max-width: 768px) {
+    #header {
+        height: 97px;
+    }
+    
     .trend-page  {
         #intro-text {
             font-size: inherit;
