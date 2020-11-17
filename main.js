@@ -127,7 +127,7 @@ players.forEach((p, i) => {
             if (videoItems.length > 0) {
 
                 if (window.innerWidth <= 992) {
-                    players[i].play();
+                    players[0].play();
                 } 
                 
                 $players[i].addEventListener('mouseover', (e)=> {
@@ -179,10 +179,6 @@ function scrolling(e) {
     if (window.innerWidth <= 992) {
         
         if (videoItems.length > 0) {
-            
-            players[0].play();
-            $players[0].dataset.aosOffset="0";
-            
             
             for (var i = 0; i < videoItems.length; i++) {
                 var videoItem = videoItems[i];
