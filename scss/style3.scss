@@ -70,13 +70,12 @@
 
 .trends-page #intro-spinner {
     right: -160px;
-    bottom: -45px;
+    bottom: -88px;
 }
 
 #say-hello-starter.trends-page .spinner .wrapper {
     width: 479px;
     height: 535px;
-    // opacity: .46;
 }
 
 #say-hello-starter .yellow-block-text {
@@ -377,25 +376,29 @@
     }
 }
 
-.trend-arrow-prev {
-    .arrow-x {
-        &::before,
-        &::after {
-            left: 0;
-            right: auto;
-            transform: rotate(41deg);
-        }
 
-        &::before {
-            transform: rotate(-41deg);
-        }
-    }
-}
 .trend-arrow-prev,
 .trend-arrow-next {
     color: #DDE6F3;
     display: flex;
     align-items: center;
+
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.trend-arrow-prev {
+    img {
+        margin-right: 7px;
+    }
+}
+
+.trend-arrow-next {
+    img {
+        margin-left: 7px;
+    }
 }
 
 @media (max-width: 1259px) {
@@ -500,12 +503,10 @@
         margin-left: 0;
     }
 }
-
-@media (max-width: 1440px) {
-    #header {
-        background-color: #020B15;
-    }
+#header {
+    background-color: #020B15;
 }
+
 
 @media (max-width: 1260px) {
     .trends-page #intro-spinner {

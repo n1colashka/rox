@@ -135,7 +135,7 @@ players.forEach((p, i) => {
                 });
                 $players[i].addEventListener('mouseout', (e)=> {
                     if (!(e.relatedTarget.closest('.video-wrapper') && e.target.closest('.plyr'))) {
-                        p.pause();
+                        p.stop();
                     }
                 });
             }
