@@ -270,6 +270,19 @@
   max-width: 100%;
 }
 
+.video-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.video-wrapper {
+  position: relative;
+}
+
 .trend {
   padding-bottom: 60px;
 }
@@ -286,6 +299,7 @@
 
 .video-wrapper {
   display: block;
+  cursor: pointer;
 }
 
 .trend-wrapper {
