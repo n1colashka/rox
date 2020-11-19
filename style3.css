@@ -14,6 +14,12 @@
   text-decoration: none;
 }
 
+.trend img,
+.videos img {
+  max-width: 100%;
+  height: auto;
+}
+
 .logo-link img {
   width: 89px;
   height: 48px;
@@ -495,7 +501,18 @@
   }
 }
 
+.videos .video-item img {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .videos .video-item .plyr {
+    display: none;
+  }
+  .videos .video-item img {
+    display: block;
+    width: 100%;
+  }
   #say-hello-starter.trend-page-hello .btn {
     font-size: 24px;
     line-height: normal;

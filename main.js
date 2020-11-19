@@ -90,7 +90,7 @@ const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => n
 const $players = document.querySelectorAll('.video-wrapper');
 var lineText = document.querySelector("#lineText");
 var videoItems = document.querySelectorAll(".video-item");
-var videoTrendItems = document.querySelectorAll(".video-el");
+// var videoTrendItems = document.querySelectorAll(".video-el");
 
 players.forEach((p, i) => {
         p.on('ready', function() {
@@ -99,36 +99,37 @@ players.forEach((p, i) => {
             p.clickToPlay = false;
             
 
-            if (videoTrendItems.length > 0) {
-                p.clickToPlay = false;
+            // if (videoTrendItems.length > 0) {
+            //     p.clickToPlay = false;
 
-                $players[i].addEventListener('mouseover', function() {
-                    document.querySelector('body.custom-mouse #mouse .cr2').classList.add('iframe-hover-circle');
-                    document.querySelector('body.custom-mouse #mouse').classList.add('iframe-hover-main');
-                });
+            //     $players[i].addEventListener('mouseover', function() {
+            //         document.querySelector('body.custom-mouse #mouse .cr2').classList.add('iframe-hover-circle');
+            //         document.querySelector('body.custom-mouse #mouse').classList.add('iframe-hover-main');
+            //     });
                 
-                $players[i].addEventListener('mouseout', function() {
-                    document.querySelector('body.custom-mouse #mouse .cr2').classList.remove('iframe-hover-circle');
-                    document.querySelector('body.custom-mouse #mouse').classList.remove('iframe-hover-main');
-                });
+            //     $players[i].addEventListener('mouseout', function() {
+            //         document.querySelector('body.custom-mouse #mouse .cr2').classList.remove('iframe-hover-circle');
+            //         document.querySelector('body.custom-mouse #mouse').classList.remove('iframe-hover-main');
+            //     });
                 
-                if (i === 0) {
+            //     if (i === 0) {
     
-                    if (isPartiallyVisible($players[i])) {
-                        p.play();
-                    } 
-                } else if (isFullyVisible($players[i])) {
-                    p.play();
-                } else {
-                    p.pause();
-                }
+            //         if (isPartiallyVisible($players[i])) {
+            //             p.play();
+            //         } 
+            //     } else if (isFullyVisible($players[i])) {
+            //         p.play();
+            //     } else {
+            //         p.pause();
+            //     }
                 
-            }  
+            // }  
+
             if (videoItems.length > 0) {
 
-                if (window.innerWidth <= 992) {
-                    players[0].play();
-                } 
+                // if (window.innerWidth <= 992) {
+                //     players[0].play();
+                // } 
                 
                 $players[i].addEventListener('mouseover', (e)=> {
                     p.play();
@@ -146,26 +147,27 @@ players.forEach((p, i) => {
 
 function scrolling(e) {
     
-    if (videoTrendItems.length > 0) {
-        players[0].play();
-        for (var i = 0; i < videoTrendItems.length; i++) {
-            var videoTrendItem = videoTrendItems[i];
-            players[i].muted = true;
-            players[i].loop = true;
+    // if (videoTrendItems.length > 0) {
+    //     players[0].play();
+    //     for (var i = 0; i < videoTrendItems.length; i++) {
+    //         var videoTrendItem = videoTrendItems[i];
+    //         players[i].muted = true;
+    //         players[i].loop = true;
 
-            if (i === 0) {
+    //         if (i === 0) {
 
-                if (isPartiallyVisible(videoTrendItem)) {
-                    players[i].play();
-                }
-            }
-            else if (isFullyVisible(videoTrendItem)) {
-                players[i].play();
-            } else {
-                players[i].pause();
-            }
-        }
-    }
+    //             if (isPartiallyVisible(videoTrendItem)) {
+    //                 players[i].play();
+    //             }
+    //         }
+    //         else if (isFullyVisible(videoTrendItem)) {
+    //             players[i].play();
+    //         } else {
+    //             players[i].pause();
+    //         }
+    //     }
+    // }
+
     if (lineText) {
         if (isFullyVisible(lineText)) {
             lineText.classList.add("active");
@@ -176,52 +178,52 @@ function scrolling(e) {
 
     
 
-    if (window.innerWidth <= 992) {
+    // if (window.innerWidth <= 992) {
         
-        if (videoItems.length > 0) {
+    //     if (videoItems.length > 0) {
             
-            for (var i = 0; i < videoItems.length; i++) {
-                var videoItem = videoItems[i];
-                players[i].muted = true;
-                players[i].loop = true;
+    //         for (var i = 0; i < videoItems.length; i++) {
+    //             var videoItem = videoItems[i];
+    //             players[i].muted = true;
+    //             players[i].loop = true;
 
-                if (i === 0) {
+    //             if (i === 0) {
                     
-                    players[i].play();
-                    videoItem.dataset.aosOffset="0";
-                }
+    //                 players[i].play();
+    //                 videoItem.dataset.aosOffset="0";
+    //             }
                 
-                else if (isFullyVisible(videoItem)) {
-                    players[i].play();
-                } else {
-                    players[i].pause();
+    //             else if (isFullyVisible(videoItem)) {
+    //                 players[i].play();
+    //             } else {
+    //                 players[i].pause();
 
-                }
-            }
-        }
+    //             }
+    //         }
+    //     }
 
-        if (videoTrendItems.length > 0) {
-            for (var i = 0; i < videoTrendItems.length; i++) {
-                var videoTrendItem = videoTrendItems[i];
-                players[i].muted = true;
-                players[i].loop = true;
-                players[i].clickToPlay = false;
+    //     if (videoTrendItems.length > 0) {
+    //         for (var i = 0; i < videoTrendItems.length; i++) {
+    //             var videoTrendItem = videoTrendItems[i];
+    //             players[i].muted = true;
+    //             players[i].loop = true;
+    //             players[i].clickToPlay = false;
 
-                if (i === 0) {
+    //             if (i === 0) {
 
-                    if (isPartiallyVisible(videoTrendItem)) {
-                        players[i].play();
-                    }
-                }
-                else if (isFullyVisible(videoTrendItem)) {
-                    players[i].play();
-                } else {
-                    players[i].pause();
-                }
-            }
-        }
+    //                 if (isPartiallyVisible(videoTrendItem)) {
+    //                     players[i].play();
+    //                 }
+    //             }
+    //             else if (isFullyVisible(videoTrendItem)) {
+    //                 players[i].play();
+    //             } else {
+    //                 players[i].pause();
+    //             }
+    //         }
+    //     }
         
-    }
+    // }
 
 }
 
