@@ -166,6 +166,17 @@
     flex-wrap: wrap;
 }
 
+.trend-video,
+.trend-big-video {
+    img {
+        width: 100%;
+    }
+}
+
+.trend-video-item-mobile {
+    display: none;
+}
+
 .video-item {
     width: 400px;
 
@@ -574,6 +585,15 @@
 }
 
 @media (max-width: 768px) {
+
+    .trend-video-item {
+        display: none;
+    }
+
+    .trend-video-item-mobile {
+        display: block;
+    }
+    
     .videos {
         .video-item .plyr {
             display: none;
