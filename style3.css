@@ -321,6 +321,10 @@
   animation: big 0.4s ease-out 0.2s 1 forwards;
 }
 
+.video-item.animated {
+  animation: big 0.4s ease-out 0.2s 1 forwards;
+}
+
 .trend-page#intro {
   min-height: auto;
   overflow: visible;
@@ -491,6 +495,19 @@
 
 #header {
   background-color: #020B15;
+}
+
+@media (min-width: 1439px) {
+  #say-hello-starter.trends-page .container {
+    margin: 0 auto;
+    max-width: 1332px;
+  }
+  #lineText {
+    margin-left: 50px;
+  }
+  #say-hello-starter.trends-page .trends-foot {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1260px) {
