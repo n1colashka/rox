@@ -154,8 +154,6 @@ let LightAreas={toh1:null,active:true,observer:null,mobileReset:true,log_light_a
         if (videoTrendItems.length > 0) {
             players[0].play();
             for (var i = 0; i < videoTrendItems.length; i++) {
-                console.log(players[i]);
-                console.log($players[i]);
                 var videoTrendItem = videoTrendItems[i];
                 players[i].muted = true;
                 players[i].loop = true;
