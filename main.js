@@ -87,10 +87,7 @@ let LightAreas={toh1:null,active:true,observer:null,mobileReset:true,log_light_a
     const players = Array.from(document.querySelectorAll('.plyr-player')).map(p => new Plyr(p, {muted:true, clickToPlay: false, controls: '',
     }));
     
-    console.log(players);
-    
     const $players = document.querySelectorAll('.video-wrapper');
-    console.log($players);
 
     var lineText = document.querySelector("#lineText");
     var videoItems = document.querySelectorAll(".video-item");
