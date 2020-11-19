@@ -305,13 +305,15 @@
 @keyframes big {
     
     0% {
+        filter: blur(10px);
         opacity: 0;
-        transform: translateY(100px)
+        transform: translateY(50px);
     }
 
     100% {
         opacity: 1;
-        transform: none
+        filter: blur(0);
+        transform: none;
     }
 }
 
@@ -512,6 +514,8 @@
         margin-left: 0;
     }
 }
+
+
 #header {
     background-color: #020B15;
 }
@@ -744,5 +748,18 @@
             letter-spacing: 0;
             line-height: 61.6px;
 }
+    }
+}
+
+
+[data-aos="blur-fade"] {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition-property: filter, transform, opacity;
+    &.aos-animate {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 }

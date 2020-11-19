@@ -301,11 +301,13 @@
 
 @keyframes big {
   0% {
+    filter: blur(10px);
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
+    filter: blur(0);
     transform: none;
   }
 }
@@ -657,4 +659,17 @@
     line-height: 24px;
     margin-bottom: 10px;
   }
+}
+
+[data-aos="blur-fade"] {
+  filter: blur(10px);
+  opacity: 0;
+  transform: translateY(50px);
+  transition-property: filter, transform, opacity;
+}
+
+[data-aos="blur-fade"].aos-animate {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0);
 }
